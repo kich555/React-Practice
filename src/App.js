@@ -88,15 +88,15 @@ function App() {
 
   return (
     <>
-      {/* <Counter /> */}
-      <CreateUser
+      <Counter />
+      {/* <CreateUser
         username={username}
         email={email}
         onChange={onChange}
         onCreate={onCreate}
       />
       <UserList users={users} onRemove={onRemove} onToggle={onToggle} />
-      <div>활성사용자 수 : {count}</div>
+      <div>활성사용자 수 : {count}</div> */}
     </>
   );
 }
