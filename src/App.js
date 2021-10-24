@@ -33,7 +33,7 @@ function App() {
         },
       }}
     >
-      <AppBlock>
+      {/* <AppBlock>
         <ButtonGroup>
           <Button size="large">BUTTON</Button>
           <Button>BUTTON</Button>
@@ -79,7 +79,7 @@ function App() {
             BUTTON
           </Button>
         </ButtonGroup>
-      </AppBlock>
+      </AppBlock> */}
     </ThemeProvider>
   );
 }
