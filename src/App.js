@@ -1,4 +1,5 @@
 import React, { useRef, useState, useMemo } from 'react';
+import './styles/reset.scss';
 import styled, { css, ThemeProvider } from 'styled-components';
 import Button from './Button';
 import Hello from './Hello';
@@ -7,84 +8,90 @@ import Counter from './Counter';
 import InputSample from './InputSample';
 import CreateUser from './CreateUser';
 import UserList from './UserList';
-
-const AppBlock = styled.div`
-  width: 512px;
-  margin: 0 auto;
-  margin-top: 4rem;
-  border: 1px solid black;
-  padding: 1rem;
-`;
-
-const ButtonGroup = styled.div`
-  & + & {
-    margin-top: 1rem;
-  }
-`;
+import Slider from './Carousel/Slider';
+import InfiniteScrollLoop from './InfiniteScrollLoop';
 
 function App() {
-  return (
-    <ThemeProvider
-      theme={{
-        palette: {
-          blue: '#228be6',
-          gray: '#495057',
-          pink: '#f06595',
-        },
-      }}
-    >
-      <AppBlock>
-        <ButtonGroup>
-          <Button size="large">BUTTON</Button>
-          <Button>BUTTON</Button>
-          <Button size="small">BUTTON</Button>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button color="gray" size="large">
-            BUTTON
-          </Button>
-          <Button color="gray">BUTTON</Button>
-          <Button color="gray" size="small">
-            BUTTON
-          </Button>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button color="pink" size="large">
-            BUTTON
-          </Button>
-          <Button color="pink">BUTTON</Button>
-          <Button color="pink" size="small">
-            BUTTON
-          </Button>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button size="large" outline>
-            BUTTON
-          </Button>
-          <Button color="gray" outline>
-            BUTTON
-          </Button>
-          <Button color="pink" size="small" outline>
-            BUTTON
-          </Button>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button size="large" fullWidth>
-            BUTTON
-          </Button>
-          <Button size="large" color="gray" fullWidth>
-            BUTTON
-          </Button>
-          <Button size="large" color="pink" fullWidth>
-            BUTTON
-          </Button>
-        </ButtonGroup>
-      </AppBlock>
-    </ThemeProvider>
-  );
+  return <Slider />;
 }
 
-export default App;
+// const AppBlock = styled.div`
+//   width: 512px;
+//   margin: 0 auto;
+//   margin-top: 4rem;
+//   border: 1px solid black;
+//   padding: 1rem;
+// `;
+
+// const ButtonGroup = styled.div`
+//   & + & {
+//     margin-top: 1rem;
+//   }
+// `;
+
+// function App() {
+//   return (
+//     <ThemeProvider
+//       theme={{
+//         palette: {
+//           blue: '#228be6',
+//           gray: '#495057',
+//           pink: '#f06595',
+//         },
+//       }}
+//     >
+//       <AppBlock>
+//         <ButtonGroup>
+//           <Button size="large">BUTTON</Button>
+//           <Button>BUTTON</Button>
+//           <Button size="small">BUTTON</Button>
+//         </ButtonGroup>
+//         <ButtonGroup>
+//           <Button color="gray" size="large">
+//             BUTTON
+//           </Button>
+//           <Button color="gray">BUTTON</Button>
+//           <Button color="gray" size="small">
+//             BUTTON
+//           </Button>
+//         </ButtonGroup>
+//         <ButtonGroup>
+//           <Button color="pink" size="large">
+//             BUTTON
+//           </Button>
+//           <Button color="pink">BUTTON</Button>
+//           <Button color="pink" size="small">
+//             BUTTON
+//           </Button>
+//         </ButtonGroup>
+//         <ButtonGroup>
+//           <Button size="large" outline>
+//             BUTTON
+//           </Button>
+//           <Button color="gray" outline>
+//             BUTTON
+//           </Button>
+//           <Button color="pink" size="small" outline>
+//             BUTTON
+//           </Button>
+//         </ButtonGroup>
+//         <ButtonGroup>
+//           <Button size="large" fullWidth>
+//             BUTTON
+//           </Button>
+//           <Button size="large" color="gray" fullWidth>
+//             BUTTON
+//           </Button>
+//           <Button size="large" color="pink" fullWidth>
+//             BUTTON
+//           </Button>
+//         </ButtonGroup>
+//       </AppBlock>
+//     </ThemeProvider>
+//   );
+// }
+
+// export default App;
 
 // function countActiveUsers(users) {
 //   console.log('활성 사용자 수를 세는 중...');
@@ -181,4 +188,4 @@ export default App;
 //   );
 // }
 
-// export default App;
+export default App;
